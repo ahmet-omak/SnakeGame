@@ -1,0 +1,10 @@
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\bin\Debug\Snake Game.exe.config
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\bin\Debug\Snake Game.exe
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\bin\Debug\Snake Game.pdb
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\obj\Debug\Snake Game.csprojAssemblyReference.cache
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\obj\Debug\Snake_Game.Form1.resources
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\obj\Debug\Snake_Game.Properties.Resources.resources
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\obj\Debug\Snake Game.csproj.GenerateResource.cache
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\obj\Debug\Snake Game.csproj.CoreCompileInputs.cache
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\obj\Debug\Snake Game.exe
+C:\Users\ahmet\OneDrive\Desktop\Snake Game\Snake Game\obj\Debug\Snake Game.pdb
