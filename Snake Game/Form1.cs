@@ -17,7 +17,7 @@ namespace Snake_Game
             InitializeComponent();
         }
 
-        #region Fields
+        #region GLOBAL VARIABLES
         int score = 0;
 
         Random rnd;
@@ -33,17 +33,17 @@ namespace Snake_Game
         PictureBox[] snakeParts;
         #endregion
 
-        //Loads screen
-        private void Form1_Load(object sender, EventArgs e)
+        //Load screen
+        private void LoadScreen(object sender, EventArgs e)
         {
-            mySnake= new Snake(panel1.Width);
+            mySnake = new Snake(panel1.Width);
             CreateFeed();
-            myDirection = new Direction(-10, 0);
+            myDirection = new Direction(-5, 0);
             snakeParts = new PictureBox[0];
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < mySnake.SnakeSize; i++)
             {
                 Array.Resize(ref snakeParts, snakeParts.Length + 1);
-                if (i==0)
+                if (i == 0)
                 {
                     snakeParts[i] = AddPictureBox(Color.DarkBlue);
                     continue;
@@ -52,7 +52,8 @@ namespace Snake_Game
             }
             Update.Start();
         }
-        //Adds PictureBox
+
+        //Add PictureBox
         PictureBox AddPictureBox(Color renk)
         {
             PictureBox pb = new PictureBox();
@@ -75,21 +76,21 @@ namespace Snake_Game
         //Movement Detection
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.W && myDirection._y!=10)
+            if (e.KeyCode==Keys.W && myDirection._y!=5)
             {
-                myDirection = new Direction(0, -10);
+                myDirection = new Direction(0, -5);
             }
-            else if(e.KeyCode==Keys.S && myDirection._y!=-10)
+            else if(e.KeyCode==Keys.S && myDirection._y!=-5)
             {
-                myDirection = new Direction(0, 10);
+                myDirection = new Direction(0, 5);
             }
-            else if(e.KeyCode==Keys.A && myDirection._x!=10)
+            else if(e.KeyCode==Keys.A && myDirection._x!=5)
             {
-                myDirection = new Direction(-10, 0);
+                myDirection = new Direction(-5, 0);
             }
-            else if(e.KeyCode==Keys.D && myDirection._x!=-10)
+            else if(e.KeyCode==Keys.D && myDirection._x!=-5)
             {
-                myDirection = new Direction(10, 0);
+                myDirection = new Direction(5, 0);
             }
             else if(e.KeyCode==Keys.Escape)
             {
@@ -97,8 +98,7 @@ namespace Snake_Game
             }
         }
 
-
-        //MOVE !
+        //Move snake
         private void Update_Tick(object sender, EventArgs e)
         {
             isGameOver();
@@ -111,7 +111,7 @@ namespace Snake_Game
             isNearWall();
         }
 
-        //Creates Feed
+        //Create feed
          void CreateFeed()
         {
             feedCheck = true;
@@ -140,7 +140,7 @@ namespace Snake_Game
             return feedCheck;
         }
 
-        //Checks whether is game over or not
+        //Checks whether or not game is over
          void isGameOver()
         {
             for (int i = 1; i < mySnake.SnakeSize; i++)
@@ -160,7 +160,7 @@ namespace Snake_Game
         {
             if (snakeParts[0].Bounds.X<0)
             {
-                mySnake.SetPosition(panel1.Width+10,snakeParts[0].Bounds.Y);
+                mySnake.SetPosition(panel1.Width+5,snakeParts[0].Bounds.Y);
             }
             else if(snakeParts[0].Bounds.X>panel1.Width)
             {
